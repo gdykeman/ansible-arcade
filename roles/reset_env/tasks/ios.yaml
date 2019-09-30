@@ -1,5 +1,5 @@
 ---
-- name: Create Loopback 200
+- name: Remove Loopback 200
   ios_l3_interface:
     name: Loopback 200
     state: absent
