@@ -1,0 +1,6 @@
+---
+
+- name: "RESET THE ENVIRONMENT FOR NEXT PARTICIPANT"
+  include_tasks: "{{ platform }}.yaml"
+  
+  

@@ -1,0 +1,23 @@
+---
+- name: ENSURE THAT THE L3 INTERFACE IS CONFIGURED
+  hosts: ios
+  gather_facts: no
+  vars:
+    loopback:
+      number: 200
+      ip: 200.200.200.200
+      mask: 255.255.255.255
+      
+  #Challenge: Update the task below to ensure that loopback interface 200 exists on the cisco router and it is assigned an ip address of 200.200.200.200
+  tasks:
+    - name: ENSURE LOOPBACK INTERFACE EXISTS
+      ios_
+
+
+#####DON’T EDIT BELOW THIS LINE
+
+    - name: TURN ON PURPLE
+      include_role:
+        name: hue
+        tasks_from: purple.yaml
+        

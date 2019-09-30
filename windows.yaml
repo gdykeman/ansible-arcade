@@ -1,0 +1,21 @@
+---
+- name: ENSURE IIS FEATURES ARE ON
+  hosts: windows
+  become: yes
+  tasks:
+
+    #Challenge: Ensure IIS is installed and that the sub features and
+    #management tools are installed
+    - name: ENSURE IIS FEATURES ARE ON
+      win_feature:
+        name: Web-Server
+        state: installed
+      register: win_feature
+
+#####DON’T EDIT BELOW THIS LINE
+
+    - name: TURN ON BLUE
+      include_role:
+        name: hue
+        tasks_from: blue.yaml
+        

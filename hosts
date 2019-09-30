@@ -1,0 +1,21 @@
+[all:vars]
+username=ec2-user
+password=ansible
+
+[linux]
+
+[windows]
+
+[network]
+rtr1   platform=ios
+sw1    platform=eos
+
+
+[linux:vars]
+platform=linux
+
+
+[windows:vars]
+platform=windows
+
+

@@ -1,0 +1,7 @@
+---
+- name: RESET THE ENVIRONMENT FOR THE NEXT PARTICIPANT
+  hosts: all
+  gather_facts: no
+  roles:
+    - reset
+    

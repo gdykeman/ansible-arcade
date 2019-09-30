@@ -1,0 +1,5 @@
+---
+- name: ENSURE APACHE IS ABSENT
+  yum:
+    name: httpd
+    state: absent

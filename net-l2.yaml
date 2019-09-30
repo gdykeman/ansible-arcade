@@ -1,0 +1,26 @@
+---
+- name: ENSURE VLANS ARE PRESENT
+  hosts: eoS
+  gather_facts: no
+  vars:
+    vlans:
+      - id: 100
+        name: vlan-100
+      - id: 200
+        name: vlan-200
+      - id: 300
+        name: vlan-300
+      
+  #Challenge: Update the task below to ensure that the 3 vlans are present
+  tasks:
+    - name: ENSURE 3 VLANS ARE PRESENT
+      eos_vlan:
+
+
+#####DON’T EDIT BELOW THIS LINE
+
+    - name: TURN ON RED
+      include_role:
+        name: hue
+        tasks_from: red.yaml
+        

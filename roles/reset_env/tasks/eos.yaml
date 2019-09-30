@@ -1,0 +1,11 @@
+---
+- name: ENSURE THE VLANS ARE ABSENT
+  eos_vlan:
+    vlan_id: “{{ item }}”
+    name: vlan-”{{item}}”
+    state: absent 
+  loop:
+    - 100
+    - 200
+    - 300
+

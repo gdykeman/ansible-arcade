@@ -1,0 +1,6 @@
+---
+
+- name: ENSURE IIS IS ABSENT
+  win_feature:
+    name: Web-Server
+    state: absent
