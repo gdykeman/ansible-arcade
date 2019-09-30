@@ -2,6 +2,10 @@
 username=ec2-user
 password=ansible
 
+
+[hue]
+hue ansible_host=169.69.69.69
+
 [linux]
 
 [windows]
