@@ -1,5 +1,5 @@
 ---
-- name: RHEL workshop_type
+- name: VALIDATE THE SOLUTIONS
   hosts: localhost
   become: true
   gather_facts: no

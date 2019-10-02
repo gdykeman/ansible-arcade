@@ -1,0 +1,15 @@
+- set_fact:
+    state: on
+    
+- set_fact:
+    on_state: "{{ on_state | combine({'xy':  yellow} )}}"
+
+- uri:
+    url: "http://{{hue_host}}/api/{{hue_user}}/lights/1/state"
+    method: PUT
+    body: ' {{on_state|to_json}}'
+  when: state is defined and state == 'on'
+  delegate_to: localhost
+  
+  
+
