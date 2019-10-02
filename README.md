@@ -34,4 +34,4 @@ The objective is to identify parameters that need to be fixed, added, and or del
 
 This project is sponsored by the Red Hat Ansible Automation Platform team:
 
-![ansible platform logo](roles/website/files/webpage_logo.png)
+![ansible platform logo](roles/website/files/images/webpage_logo_black.png)

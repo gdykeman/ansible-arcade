@@ -41,7 +41,7 @@
 - name: copy CSS over
   become: yes
   copy:
-    src: "webpage_logo.png"
+    src: "images"
     dest: "{{ file_path }}"
     directory_mode: true
 
