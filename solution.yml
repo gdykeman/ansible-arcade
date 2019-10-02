@@ -9,6 +9,14 @@
       debug:
         msg: "running solution algorithm delta niner 33283x83"
 
+    - set_fact:
+         lights:
+           bulb1: {{bulb1 | default(lights.bulb1,true)}}
+           bulb2: {{bulb2 | default(lights.bulb2,true)}}
+           bulb3: {{bulb3 | default(lights.bulb3,true)}}
+           bulb4: {{bulb4 | default(lights.bulb4,true)}}
+           bulb5: {{bulb5 | default(lights.bulb5,true)}}
+
     - name: TURN ON ORANGE
       include_role:
         name: website

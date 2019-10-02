@@ -14,4 +14,6 @@
 #####DON’T EDIT BELOW THIS LINE
 
 - name: update solution
+  vars:
+    bulb1: true
   import_playbook: "solution.yml"
