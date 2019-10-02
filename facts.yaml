@@ -11,7 +11,7 @@
 
 #####DON’T EDIT BELOW THIS LINE
 
-    - name: TURN ON GREEN
-      include_role:
-        name: hue
-        tasks_from: green.yaml
+- name: update solution
+  vars:
+    bulb5: true
+  import_playbook: "solution.yml"

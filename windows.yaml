@@ -4,7 +4,7 @@
   become: yes
   tasks:
 
-#Challenge: Update the below task 
+#Challenge: Update the below task
 #Ensure IIS is installed WITH Sub features and management tools
     - name: ENSURE IIS FEATURES ARE ON
       win_feature:
@@ -14,8 +14,7 @@
 
 #####DON’T EDIT BELOW THIS LINE
 
-    - name: TURN ON BLUE
-      include_role:
-        name: hue
-        tasks_from: blue.yaml
-        
+- name: update solution
+  vars:
+    bulb2: true
+  import_playbook: "solution.yml"

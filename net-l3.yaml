@@ -7,7 +7,7 @@
       number: 200
       ip: 200.200.200.200
       mask: 255.255.255.255
-      
+
 #Challenge: Update the task below
 #Ensure the Loopback Interface is configured using the {{ loopback }} variable
   tasks:
@@ -17,8 +17,7 @@
 
 #####DON’T EDIT BELOW THIS LINE
 
-    - name: TURN ON PURPLE
-      include_role:
-        name: hue
-        tasks_from: purple.yaml
-        
+- name: update solution
+  vars:
+    bulb4: true
+  import_playbook: "solution.yml"

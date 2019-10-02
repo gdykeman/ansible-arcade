@@ -10,7 +10,7 @@
         name: vlan-200
       - id: 300
         name: vlan-300
-      
+
 #Challenge: Update the task below
 #Utilize the {{ vlans }} variable to push the correct configuration
   tasks:
@@ -20,8 +20,7 @@
 
 #####DON’T EDIT BELOW THIS LINE
 
-    - name: TURN ON RED
-      include_role:
-        name: hue
-        tasks_from: red.yaml
-        
+- name: update solution
+  vars:
+    bulb3: true
+  import_playbook: "solution.yml"
