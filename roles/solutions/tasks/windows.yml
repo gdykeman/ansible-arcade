@@ -1,0 +1,5 @@
+---
+
+- name: everything looks good
+  set_fact:
+    bulb2: true

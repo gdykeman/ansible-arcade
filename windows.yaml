@@ -1,7 +1,6 @@
 ---
 - name: ENSURE IIS FEATURES ARE ON
   hosts: windows
-  become: yes
   tasks:
 
 #Challenge: Update the below task
@@ -11,11 +10,10 @@
         name: Web-Server
         state: running
       register: win_feature
-      ignore_errors: yes
 
 #####DON’T EDIT BELOW THIS LINE
 
-- name: update solution
+- name: check solution
   vars:
-    bulb2: true
+    lab: windows
   import_playbook: "solution.yml"

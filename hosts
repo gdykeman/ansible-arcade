@@ -23,6 +23,12 @@ platform=linux
 
 [windows:vars]
 platform=windows
-
+platform=windows
+ansible_user=Administrator
+ansible_password=ansible
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_transport=credssp
+ansible_winrm_server_cert_validation=ignore
 
 
