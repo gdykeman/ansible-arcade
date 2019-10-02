@@ -27,11 +27,11 @@ $("document").ready(function(){
 <body>
 <center>
 <h1>Ansible Arcade</h1>
-{% if lights.bulb1|bool %}{% else %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_yellow.png">{% endif %}
-{% if lights.bulb1|bool %}{% else %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_blue.png">{% endif %}<img src="images/bulb_none.png">
-{% if lights.bulb1|bool %}{% else %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_red.png">{% endif %}
-{% if lights.bulb1|bool %}{% else %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_green.png">{% endif %}
-{% if lights.bulb1|bool %}{% else %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_purple.png">{% endif %}
+{% if lights.bulb1|bool %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_yellow.png">{% endif %}
+{% if lights.bulb2|bool %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_blue.png">{% endif %}<img src="images/bulb_none.png">
+{% if lights.bulb3|bool %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_red.png">{% endif %}
+{% if lights.bulb4|bool %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_green.png">{% endif %}
+{% if lights.bulb5|bool %}<img src="images/bulb_none.png">{% else %}<img src="images/bulb_purple.png">{% endif %}
 </center>
 
 <center><p>Created with</p><br><img src="images/webpage_logo.png" width="300">
