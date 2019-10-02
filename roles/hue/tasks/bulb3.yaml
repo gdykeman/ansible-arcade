@@ -1,6 +1,6 @@
 - set_fact:
     state: on
-  when: lights.bulb3
+  when: lights.bulb3|bool
   
 - set_fact:
     on_state: "{{ on_state | combine({'xy':  red} )}}"
