@@ -19,7 +19,9 @@
 
     - name: push structured data to groupvars
       copy:
-        content: "{{ lights | to_nice_yaml}}"
+        content: |
+          lights:
+            {{ lights | to_nice_yaml}}
         dest: "{{playbook_dir}}/group_vars/all.yml"
 
     - debug:
