@@ -1,2 +1,17 @@
 ---
-- name: TBD
+- name: ENSURE THAT THE L3 INTERFACE IS CONFIGURED
+  hosts: localhost
+
+  tasks:
+  ###Fill in the template to display Ansible Generated Facts
+    - name: Template Out Values
+      template:
+        src: values.j2
+
+
+#####DON’T EDIT BELOW THIS LINE
+
+    - name: TURN ON GREEN
+      include_role:
+        name: hue
+        tasks_from: green.yaml
