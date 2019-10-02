@@ -17,6 +17,11 @@
          bulb4: "{{ bulb4 | default(lights.bulb4,true)}}"
          bulb5: "{{ bulb5 | default(lights.bulb5,true)}}"
 
+    - name: push structured data to groupvars
+        copy:
+          content: "{{ lights | to_nice_yaml}}"
+          dest: "{{playbook_dir}}/group_vars/all.yml"
+
     - debug:
         var: lights
 
