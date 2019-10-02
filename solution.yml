@@ -21,7 +21,11 @@
       copy:
         content: |
           lights:
-            {{ lights | to_nice_yaml}}
+            {{ bulb1 }}
+            {{ bulb2 }}
+            {{ bulb3 }}
+            {{ bulb4 }}
+            {{ bulb5 }}
         dest: "{{playbook_dir}}/group_vars/all.yml"
 
     - debug:
