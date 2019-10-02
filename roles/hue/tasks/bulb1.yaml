@@ -1,5 +1,6 @@
 - set_fact:
     state: on
+  when: bulb1
     
 - set_fact:
     on_state: "{{ on_state | combine({'xy':  yellow} )}}"
