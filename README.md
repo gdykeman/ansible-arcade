@@ -16,4 +16,4 @@ There is several philosophies of this demo concept:
 
 This project is sponsored by the Red Hat Ansible Automation Platform team:
 
-![ansible platform logo](roles/website/files/webpage_logo_black.png)
+![ansible platform logo](roles/website/files/images/webpage_logo_black.png)

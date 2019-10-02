@@ -5,9 +5,13 @@
   gather_facts: no
   connection: local
   tasks:
-    - name: Print Summary Information
+    - name: running encrypted load-letter logic
       debug:
-        msg: "Running solution"
+        msg: "running solution algorithm delta niner 33283x83"
+
+    - name: TURN ON ORANGE
+      include_role:
+        name: website
 
     - name: TURN ON ORANGE
       include_role:
