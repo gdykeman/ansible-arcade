@@ -38,7 +38,7 @@
     dest: "{{ file_path }}"
     directory_mode: true
 
-- name: copy CSS over
+- name: copy images over
   become: yes
   copy:
     src: "images"
