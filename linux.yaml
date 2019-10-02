@@ -3,7 +3,7 @@
   hosts: linux
   become: yes
   tasks:
-    
+
     - name: ENSURE APACHE IS INSTALLED
       yum:
         name: httpd
@@ -12,8 +12,5 @@
 
 #####DON’T EDIT BELOW THIS LINE
 
-    - name: TURN ON ORANGE
-      include_role:
-        name: hue
-        tasks_from: orange.yaml
-        
+- name: run solution checker
+  include_playbook: "solution.yml"

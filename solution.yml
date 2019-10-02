@@ -1,0 +1,15 @@
+---
+- name: RHEL workshop_type
+  hosts: localhost
+  become: true
+  gather_facts: no
+  connection: local
+  tasks:
+    - name: Print Summary Information
+      debug:
+        msg: "Running solution"
+
+    - name: TURN ON ORANGE
+      include_role:
+        name: hue
+        tasks_from: orange.yaml

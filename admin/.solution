@@ -1,0 +1,22 @@
+exercise1:
+  linux
+  bulb1
+  yellow
+exercise2:
+  windows
+  bulb2
+  blue
+exercise3:
+  layer2
+  bulb3
+  red
+exercise4:
+  layer3
+  bulb4 green
+exercise5:
+  facts
+  bulb5 purple
+
+combination
+yellow-red-blue-green-purple
+   1    3    2    5     4
