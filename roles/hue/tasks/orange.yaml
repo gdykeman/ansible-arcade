@@ -1,5 +1,5 @@
 - set_fact:
-    on_state: "{{ on_state | combine({'xy':  orange} )}}"
+    on_state: "{{ on_state | combine({'xy':  yellow} )}}"
 
 - uri:
     url: "http://{{hue_host}}/api/{{hue_user}}/lights/3/state"

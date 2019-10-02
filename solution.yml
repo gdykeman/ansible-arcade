@@ -35,7 +35,9 @@
       include_role:
         name: website
 
-    - name: TURN ON ORANGE
+    - name: TURN ON THE BULBS
       include_role:
         name: hue
-        tasks_from: orange.yaml
+        tasks_from: "{{ item.key }}.yaml"
+      loop: "{{ lights | dict2items }}"
+        
