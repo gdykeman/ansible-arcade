@@ -14,12 +14,15 @@ There are several philosophies of this demo concept:
 
 # Challenges
 There are a total of five challenges that need to be solved in order to complete the Ansible Arcade.
-Each Ansible Playbook has already been created:
+
+Five Ansible Playbooks has already been created:
 - linux.yaml
 - windows.yaml
 - net-l2.yaml
 - net-l3.yaml
 - facts.yaml
+
+The objective is to identify the parameters that need to be fixed, added, and or deleted in order to complete the challenge.
 
 # Sponsored by
 
