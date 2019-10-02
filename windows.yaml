@@ -9,7 +9,7 @@
     - name: ENSURE IIS FEATURES ARE ON
       win_feature:
         name: Web-Server
-        state: installed
+        state: running
       register: win_feature
 
 #####DON’T EDIT BELOW THIS LINE
