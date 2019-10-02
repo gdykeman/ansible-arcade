@@ -1,5 +1,5 @@
 ---
-- name: ENSURE THAT THE L3 INTERFACE IS CONFIGURED
+- name: ENSURE THAT THE L3 INTERFACE IS CONFIGURED ON CISCO DEVICE
   hosts: ios
   gather_facts: no
   vars:
@@ -8,7 +8,8 @@
       ip: 200.200.200.200
       mask: 255.255.255.255
       
-  #Challenge: Update the task below to ensure that loopback interface 200 exists on the cisco router and it is assigned an ip address of 200.200.200.200
+#Challenge: Update the task below
+#Ensure the Loopback Interface is configured using the {{ loopback }} variable
   tasks:
     - name: ENSURE LOOPBACK INTERFACE EXISTS
       ios_

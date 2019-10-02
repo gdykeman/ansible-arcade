@@ -1,5 +1,5 @@
 ---
-- name: ENSURE VLANS ARE PRESENT
+- name: ENSURE VLANS ARE PRESENT ON ARISTA DEVICE
   hosts: eos
   gather_facts: no
   vars:
@@ -11,7 +11,8 @@
       - id: 300
         name: vlan-300
       
-  #Challenge: Update the task below to ensure that the 3 vlans are present
+#Challenge: Update the task below
+#Utilize the {{ vlans }} variable to push the correct configuration
   tasks:
     - name: ENSURE 3 VLANS ARE PRESENT
       eos_vlan:

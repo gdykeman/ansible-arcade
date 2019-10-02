@@ -3,7 +3,7 @@
   hosts: localhost
 
   tasks:
-  ###Fill in the template to display Ansible Generated Facts
+#Edit values.j2 to correctly display the corresponding ansible_fact
     - name: Template Out Values
       template:
         src: values.j2
