@@ -27,8 +27,11 @@ $("document").ready(function(){
 <body>
 <center>
 <h1>Ansible Arcade</h1>
-{% if lights.bulb1|bool %}<img src="{% else %}
-{% if bulb_two|bool %}<img src="{% else %}"<img src="bulb_none.png"><img src="bulb_yellow.png"><img src="bulb_none.png"><img src="bulb_none.png"><img src="bulb_none.png">
+{% if lights.bulb1|bool %}{% else %}<img src="bulb_none.png">{% else %}<img src="bulb_yellow.png">{% endif %}
+{% if lights.bulb1|bool %}{% else %}<img src="bulb_none.png">{% else %}<img src="bulb_blue.png">{% endif %}<img src="bulb_none.png">
+{% if lights.bulb1|bool %}{% else %}<img src="bulb_none.png">{% else %}<img src="bulb_red.png">{% endif %}
+{% if lights.bulb1|bool %}{% else %}<img src="bulb_none.png">{% else %}<img src="bulb_green.png">{% endif %}
+{% if lights.bulb1|bool %}{% else %}<img src="bulb_none.png">{% else %}<img src="bulb_purple.png">{% endif %}
 </center>
 
 <center><p>Created with</p><br><img src="webpage_logo.png" width="300">
