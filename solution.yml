@@ -21,11 +21,11 @@
       copy:
         content: |
           lights:
-            {{ lights.bulb1 }}
-            {{ lights.bulb2 }}
-            {{ lights.bulb3 }}
-            {{ lights.bulb4 }}
-            {{ lights.bulb5 }}
+            bulb1: {{ lights.bulb1 }}
+            bulb2: {{ lights.bulb2 }}
+            bulb3: {{ lights.bulb3 }}
+            bulb4: {{ lights.bulb4 }}
+            bulb5: {{ lights.bulb5 }}
         dest: "{{playbook_dir}}/group_vars/all.yml"
 
     - debug:
