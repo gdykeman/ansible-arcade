@@ -3,7 +3,8 @@
   hosts: linux
   become: yes
   tasks:
-
+#Challenge: Update task below
+#Ensure Apache is installed
     - name: ENSURE APACHE IS INSTALLED
       yum:
         name: httpd
