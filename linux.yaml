@@ -13,5 +13,5 @@
 
 #####DON’T EDIT BELOW THIS LINE
 
-- name: run solution checker
-  include_playbook: "solution.yml"
+- name: update solution
+  import_playbook: "solution.yml"
