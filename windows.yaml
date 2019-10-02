@@ -10,6 +10,7 @@
         name: Web-Server
         state: running
       register: win_feature
+      ignore_errors: yes
 
 #####DON’T EDIT BELOW THIS LINE
 
