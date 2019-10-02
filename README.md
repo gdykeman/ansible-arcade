@@ -22,7 +22,13 @@ Five Ansible Playbooks has already been created:
 - net-l3.yaml
 - facts.yaml
 
-The objective is to identify the parameters that need to be fixed, added, and or deleted in order to complete the challenge.
+The objective is to identify parameters that need to be fixed, added, and or deleted in order meet the requirements per challenge.
+
+1. Linux (RHEL) - Inspect the module being utilized to figure out why the playbook is failing.
+2. Windows - Identify the missing parameters to fullfil the requirements
+3. Layer 2 - Utilize the data model to push the correct configuration to the Arista Device
+4. Layer 3 - Utilize the data model to push the correct configuraiton to the Cisco Device
+5. Facts - Identify the facts that are gathered to correctly populate the variables in values.j2
 
 # Sponsored by
 
