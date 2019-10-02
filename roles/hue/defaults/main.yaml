@@ -1,0 +1,22 @@
+---
+on_state:
+  "on": true
+  "bri": 200
+  "xy": [0.5558, 0.3036] #Default
+off_state:
+  "on": false
+blue:
+  - 0.1769
+  - 0.0587
+red:
+  - 0.6721
+  - 0.3212
+green:
+  - 0.4084
+  - 0.5168
+purple:
+  - 0.2595
+  - 0.0965
+orange:
+  - 0.5631
+  - 0.4032
