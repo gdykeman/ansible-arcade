@@ -1,5 +1,5 @@
 ---
-- name: ENSURE THAT THE L3 INTERFACE IS CONFIGURED
+- name: Ansible Facts
   hosts: localhost
 
   tasks:

@@ -1,6 +1,6 @@
 ---
 - name: ENSURE VLANS ARE PRESENT
-  hosts: eoS
+  hosts: eos
   gather_facts: no
   vars:
     vlans:
