@@ -1,0 +1,5 @@
+---
+- debug:
+    msg: "checking {{ lab }} solution"
+
+- include_tasks: "{{ lab }}.yml"

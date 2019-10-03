@@ -1,5 +1,9 @@
 - set_fact:
-    on_state: "{{ on_state | combine({'xy':  purple} )}}"
+    state: on
+  when: lights.bulb4|bool
+  
+- set_fact:
+    on_state: "{{ on_state | combine({'xy':  green} )}}"
 
 - uri:
     url: "http://{{hue_host}}/api/{{hue_user}}/lights/4/state"
