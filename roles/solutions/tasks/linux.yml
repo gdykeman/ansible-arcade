@@ -1,0 +1,17 @@
+---
+- name: checking httpd
+  yum:
+    name: httpd
+    state: present
+  check_mode: yes
+  register: sl_lin_check_httpd
+
+- name: looking good
+  set_fact:
+    bulb1: true
+  when: not sl_lin_check_httpd.changed
+
+- name: oops something went wrong
+  set_fact:
+    bulb1: false
+  when: sl_lin_check_httpd.changed

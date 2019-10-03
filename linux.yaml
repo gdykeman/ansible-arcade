@@ -15,5 +15,5 @@
 
 - name: update solution
   vars:
-    bulb1: true
+    lab: windows
   import_playbook: "solution.yml"
