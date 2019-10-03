@@ -40,6 +40,9 @@
       debug:
         msg: "running solution algorithm delta niner 33283x83"
 
+    - debug:
+        var: lights
+
     - name: TURN ON ORANGE
       include_role:
         name: website
