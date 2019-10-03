@@ -75,15 +75,9 @@ thead th {
 tbody tr td {
   font-family: 'Open Sans', sans-serif;
   font-weight:400;
-  color:#5f6062;
-  font-size:13px;
-  padding:20px 20px 20px 20px;
-  border-bottom:1px solid #e0e0e0;
-
-}
-
-tbody tr:nth-child(2n) {
-  background:#f0f3f5;
+  color:#ffffff;
+  font-size:30px;
+  text-align: center;
 }
 
 tbody tr:last-child td {
