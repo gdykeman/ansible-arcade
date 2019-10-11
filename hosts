@@ -1,4 +1,4 @@
-localhost hue_host=10.0.1.106 hue_user=c586d5519cc4a956230f6a26a5a9c14
+localhost hue_host=10.0.1.128 hue_user=c586d5519cc4a956230f6a26a5a9c14
 
 [all:vars]
 username=ec2-user
