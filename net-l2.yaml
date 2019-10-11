@@ -22,5 +22,5 @@
 
 - name: update solution
   vars:
-    bulb3: true
+    lab: net-l2
   import_playbook: "solution.yml"

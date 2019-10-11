@@ -1,0 +1,28 @@
+---
+- name: checking eos vlan
+  eos_vlan:
+    vland_id: "{{ item.id }}"
+    name: "{{ item.name }}"
+    state: present
+  check_mode: yes
+  register: sl_netl2_check_vlan
+  loop: "{{ vlans }}"
+  vars:
+    vlans:
+      - id: 100
+        name: vlan-100
+      - id: 200
+        name: vlan-200
+      - id: 300
+        name: vlan-300
+
+
+- name: looking good
+  set_fact:
+    bulb3: true
+  when: not sl_netl2_check_vlan.changed
+
+- name: oops something went wrong
+  set_fact:
+    bulb3: false
+  when: sl_netl2_check_vlan.changed

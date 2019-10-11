@@ -1,21 +1,18 @@
 ---
-- name: VALIDATE THE SOLUTIONS
-  hosts: localhost
-  become: true
+- name: VALIDATE THE SOLUTION
+  hosts: "{{ lab }}"
   gather_facts: no
-  connection: local
   tasks:
-    - name: running encrypted load-letter logic
-      debug:
-        msg: "running solution algorithm delta niner 33283x83"
+    - include_role:
+        name: solutions
 
     - set_fact:
        lights:
-         bulb1: "{{ bulb1 | default(lights.bulb1,true)}}"
-         bulb2: "{{ bulb2 | default(lights.bulb2,true)}}"
-         bulb3: "{{ bulb3 | default(lights.bulb3,true)}}"
-         bulb4: "{{ bulb4 | default(lights.bulb4,true)}}"
-         bulb5: "{{ bulb5 | default(lights.bulb5,true)}}"
+         bulb1: "{{ bulb1 | default(lights.bulb1) }}"
+         bulb2: "{{ bulb2 | default(lights.bulb2) }}"
+         bulb3: "{{ bulb3 | default(lights.bulb3) }}"
+         bulb4: "{{ bulb4 | default(lights.bulb4) }}"
+         bulb5: "{{ bulb5 | default(lights.bulb5) }}"
 
     - name: push structured data to groupvars
       copy:
@@ -27,6 +24,21 @@
             bulb4: {{ lights.bulb4 }}
             bulb5: {{ lights.bulb5 }}
         dest: "{{playbook_dir}}/group_vars/all.yml"
+      delegate_to: localhost
+      connection: local
+
+    - debug:
+        var: lights
+
+- name: VALIDATE THE SOLUTIONS
+  hosts: localhost
+  become: false
+  gather_facts: no
+  connection: local
+  tasks:
+    - name: running encrypted load-letter logic
+      debug:
+        msg: "running solution algorithm delta niner 33283x83"
 
     - debug:
         var: lights
@@ -40,4 +52,3 @@
         name: hue
         tasks_from: "{{ item.key }}.yaml"
       loop: "{{ lights | dict2items }}"
-        

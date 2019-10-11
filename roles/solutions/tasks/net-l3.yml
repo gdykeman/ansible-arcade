@@ -1,0 +1,22 @@
+---
+- name: checking l3 interface
+  ios_l3_interface:
+    name: loopback
+    state: present
+  check_mode: yes
+  register: sl_netl3_check_interface
+  vars:
+    loopback:
+      number: 200
+      ip: 200.200.200.200
+      mask: 255.255.255.255
+
+- name: looking good
+  set_fact:
+    bulb4: true
+  when: not sl_netl3_check_interface.changed
+
+- name: oops something went wrong
+  set_fact:
+    bulb4: false
+  when: sl_netl3_check_interface.changed

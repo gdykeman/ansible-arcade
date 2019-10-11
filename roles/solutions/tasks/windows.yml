@@ -1,0 +1,19 @@
+---
+- name: checking iis
+  win_feature:
+    name: Web-Server
+    state: present
+    include_sub_features: yes
+    include_management_tools: yes
+  check_mode: yes
+  register: sl_win_check_iis
+
+- name: looking good
+  set_fact:
+    bulb2: true
+  when: not sl_win_check_iis.changed
+
+- name: oops something went wrong
+  set_fact:
+    bulb2: false
+  when: sl_win_check_iis.changed

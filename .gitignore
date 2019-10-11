@@ -1,3 +1,4 @@
 .retry
 .DS_Store
 test*
+my_hosts

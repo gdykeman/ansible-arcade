@@ -15,5 +15,5 @@
 
 - name: update solution
   vars:
-    bulb1: true
+    lab: linux
   import_playbook: "solution.yml"

@@ -19,5 +19,5 @@
 
 - name: update solution
   vars:
-    bulb4: true
+    lab: net-l3
   import_playbook: "solution.yml"
