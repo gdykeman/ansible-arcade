@@ -15,5 +15,5 @@
 
 - name: update solution
   vars:
-    lab: windows
+    lab: linux
   import_playbook: "solution.yml"
