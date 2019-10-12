@@ -3,24 +3,3 @@
 - name: "RESET THE ENVIRONMENT FOR NEXT PARTICIPANT"
   include_tasks: "{{ platform }}.yaml"
 
-- name: TURN OFF
-  include_vars: off_state.yaml
-  tags: lightsoff
-  delegate_to: localhost
-  run_once: true
-  
-- name: TURN OFF ALL LIGHTS
-  include_role:
-    name: hue
-    tasks_from: "{{ item.key }}.yaml"
-    #vars_from: off_state.yaml
-  loop: "{{ lights | dict2items }}"
-  tags: lightsoff
-  
-  
-  
-# - name: TURN OFF ALL LIGHTS
-#   debug:
-#     msg: "{{ item.key }}.yaml"
-#   loop: "{{ lights | dict2items }}"
-#   tags: lightsoff
