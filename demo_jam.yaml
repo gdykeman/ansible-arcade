@@ -1,0 +1,51 @@
+- name: VALIDATE THE SOLUTIONS
+  hosts: localhost
+  become: false
+  gather_facts: no
+  connection: local
+
+  tasks:
+    - name: running encrypted load-letter logic
+      debug:
+        msg: "running solution algorithm delta niner 33283x83"
+  
+    - name: TURN ON THE BULB1
+      include_role:
+        name: hue
+        tasks_from: "bulb1.yaml"
+
+    - pause:
+        seconds: 5
+
+    - name: TURN ON THE BULB2
+      include_role:
+        name: hue
+        tasks_from: "bulb2.yaml"
+
+    - pause:
+        seconds: 5
+
+    - name: TURN ON THE BULB3
+      include_role:
+        name: hue
+        tasks_from: "bulb3.yaml"
+
+    - pause:
+        seconds: 5
+
+    - name: TURN ON THE BULB4
+      include_role:
+        name: hue
+        tasks_from: "bulb4.yaml"
+
+    - pause:
+        seconds: 5
+        
+    - name: TURN ON THE BULB5
+      include_role:
+        name: hue
+        tasks_from: "bulb5.yaml"
+
+    - name: COMPLETE
+      debug:
+        msg: "CONGRATULATIONS YOU'VE SOLVED ALL THE CHALLENGES! CLAIM YOUR PRIZE!!"
